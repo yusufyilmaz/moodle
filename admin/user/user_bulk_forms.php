@@ -29,6 +29,7 @@ class user_bulk_action_form extends moodleform {
         }
         if (has_capability('moodle/cohort:assign', $syscontext)) {
             $actions[8] = get_string('bulkadd', 'core_cohort');
+            $actions[9] = get_string('bulkremove', 'core_cohort');
         }
         $objs = array();
         $objs[] =& $mform->createElement('select', 'action', null, $actions);
